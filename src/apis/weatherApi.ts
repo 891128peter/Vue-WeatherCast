@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const CWA_API_KEY = "CWA-2DC46789-9C58-43CF-ACF5-1FD6796F38B6";
+const CWA_API_KEY = import.meta.env.VITE_CWA_API_KEY;
 const BASE_URL = "https://opendata.cwa.gov.tw/api/v1/rest/datastore";
 
 export async function fetch36HrForecastRaw() {
