@@ -50,4 +50,24 @@ h1 {
 .actions .btn:hover {
   background-color: #16a085;
 }
+
+@media (max-width: 768px) {
+  .home-page {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .actions .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
 </style>
