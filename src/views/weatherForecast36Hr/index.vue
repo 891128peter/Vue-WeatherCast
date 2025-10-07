@@ -34,9 +34,9 @@
           <tr v-for="cityWeather in weather" :key="cityWeather.city">
             <td>{{ cityWeather.city }}</td>
             <td>{{ cityWeather.periods[timeIndex]?.weather }}</td>
-            <td>{{ cityWeather.periods[timeIndex]?.minT }}</td>
-            <td>{{ cityWeather.periods[timeIndex]?.maxT }}</td>
-            <td>{{ cityWeather.periods[timeIndex]?.pop }}</td>
+            <td>{{ cityWeather.periods[timeIndex]?.minT }} °C</td>
+            <td>{{ cityWeather.periods[timeIndex]?.maxT }} °C</td>
+            <td>{{ cityWeather.periods[timeIndex]?.pop }} %</td>
             <td>{{ cityWeather.periods[timeIndex]?.comfort }}</td>
           </tr>
         </tbody>
@@ -59,7 +59,6 @@ const timeIndex = ref(0);
 onMounted(async () => {
   const weathers = await getAll36HrForecast();
   weather.value = weathers;
-  console.log("全台縣市資料：", weather.value);
 });
 </script>
 
